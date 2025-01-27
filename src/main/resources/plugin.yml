@@ -1,0 +1,17 @@
+name: VuoristoCore
+version: '1.0-SNAPSHOT'
+main: me.fisupala.vuoristoCore.VuoristoCore
+api-version: '1.21'
+authors: [ Fisupala ]
+description: Perus asioita minecraft palvelin lobbyyn
+website: https://github.com/fisupala
+commands:
+  gm:
+    usage: /gm <1,2,3>
+    description: Komento auttaa gamemoden vaihtamisessa nopeasti
+  tpa:
+    description: Send a teleport request to another player.
+    usage: /tpa <player_name>
+  tpaccept:
+    description: Accept a teleport request.
+    usage: /tpaccept
