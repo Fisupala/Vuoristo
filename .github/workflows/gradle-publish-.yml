@@ -32,12 +32,12 @@ jobs:
         chmod +x ./gradlew
         ./gradlew build
       
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v4.6.0
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
       with:
-        # Artifact name
-        name: vuoristo-core-build
-        # A file, directory or wildcard pattern that describes what to upload
-        path: ./build/libs/VuoristoCore*
-        # The desired behavior if no files are found using the provided path.
+        files: ./build/libs/VuoristoCore*
+        name: ${{ github.ref_name }}
+        body: ${{ github.event.head_commit.message }}
+
 
