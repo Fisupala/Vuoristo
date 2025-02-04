@@ -29,7 +29,7 @@ jobs:
 
     - name: Build
       run: |
-        ls -la ./
+        chmod +x ./gradlew
         ./gradlew build
       
     - name: Upload artifacts
